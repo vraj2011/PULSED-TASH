@@ -1,8 +1,4 @@
-/* ====================================
-   PULSED TASH — hand-coded, human-made
-   ==================================== */
 
-/* reset */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -13,33 +9,28 @@ body {
   background: #0a0014;
   color: #e8deff;
   min-height: 100vh;
-  /* position: relative so the ::before / ::after pseudo-elements
-     know where to anchor themselves */
+  
   position: relative;
   overflow-x: hidden;
 }
 
-/* ============================================================
-   SIDE STRIPS — pseudo-elements (no extra html needed)
-   clip-path cuts them into a zigzag shape down the full height
-   ============================================================ */
 
 body::before,
 body::after {
-  content: '';           /* required — without this they don't render at all */
-  position: fixed;       /* stays pinned to the sides as you scroll */
+  content: '';           
+  position: fixed;       
   top: 0;
   width: 60px;
   height: 100%;
   background: linear-gradient(180deg, #6c3bff 0%, #c026d3 50%, #6c3bff 100%);
-  z-index: -1;           /* sits behind all your content */
+  z-index: -1;           
   opacity: 0.7;
 }
 
-/* left strip */
+
 body::before {
   left: 0;
-  /* zigzag cut on the right edge of the strip */
+  
   clip-path: polygon(
     0 0,
     100% 0,
@@ -87,10 +78,9 @@ body::before {
   );
 }
 
-/* right strip (mirror of the left) */
 body::after {
   right: 0;
-  /* zigzag cut on the left edge of the strip */
+  
   clip-path: polygon(
     0 0,
     100% 0,
@@ -139,18 +129,15 @@ body::after {
   );
 }
 
-/* ============================
-   MAIN CONTENT AREA
-   ============================ */
 
 #app {
   max-width: 760px;
-  margin: 0 auto;          /* centers the card horizontally */
+  margin: 0 auto;          
   padding: 60px 24px 80px;
   text-align: center;
 }
 
-/* title */
+
 h1 {
   font-family: 'Orbitron', sans-serif;
   font-size: 1.9rem;
@@ -162,7 +149,7 @@ h1 {
   letter-spacing: 0.04em;
 }
 
-/* nasa image */
+
 img {
   width: 100%;
   max-width: 700px;
@@ -174,7 +161,7 @@ img {
   margin: 0 auto 28px;
 }
 
-/* nasa video (direct file) */
+
 video {
   width: 100%;
   max-width: 700px;
@@ -185,19 +172,19 @@ video {
   margin: 0 auto 28px;
 }
 
-/* youtube embed (bonus challenge) */
+
 iframe {
   width: 100%;
   max-width: 700px;
-  aspect-ratio: 16 / 9;   /* keeps the video proportional */
-  border-radius: 12px;
+  aspect-ratio: 16 / 9;   
+    border-radius: 12px;
   border: 2px solid #6c3bff55;
   box-shadow: 0 0 40px #6c3bff33;
   display: block;
   margin: 0 auto 28px;
 }
 
-/* explanation paragraph */
+
 p {
   font-family: 'Black Ops One', sans-serif;
   font-size: 0.95rem;
@@ -206,7 +193,6 @@ p {
   text-align: left;
 }
 
-/* loading state */
 p:only-child {
   text-align: center;
   opacity: 0.6;
@@ -220,7 +206,6 @@ p:only-child {
   50%       { opacity: 0.9; }
 }
 
-/* error state */
 .error {
   color: #ff6b9d;
   text-align: center !important;
@@ -228,11 +213,6 @@ p:only-child {
   font-size: 1rem;
   opacity: 0.85;
 }
-
-/* ================================================
-   RESPONSIVE — hide the zigzag strips on phones
-   (they'd overlap the content on narrow screens)
-   ================================================ */
 
 @media (max-width: 600px) {
   body::before,
