@@ -16,30 +16,6 @@ Built as part of the [Hack Club PULSED](https://pulsed.hackclub.com) challenge.
 - **Build Tool**: Vite
 - **APIs**: NASA APOD API + NASA NEO Feed API
 
-## Running Locally
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/vraj2011/PULSED-TASH.git
-   cd PULSED-TASH
-   ```
-
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-
-3. Create a `.env` file in the root directory:
-   ```env
-   VITE_NASA_API_KEY=your_key_here
-   ```
-   > Get a free API key at [api.nasa.gov](https://api.nasa.gov).
-
-4. Start the dev server:
-   ```bash
-   npm run dev
-   ```
-
 ---
 
 Made by [vraj](https://github.com/vraj2011) ✌️
