@@ -3,13 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PULSED TASH — NASA Astronomy Picture of the Day</title>
-    <meta name="description" content="Daily astronomy pictures from NASA, styled with a hand-coded human touch." />
-    <!-- Google Fonts: Orbitron for headings, Black Ops One for body -->
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@900&family=Black+Ops+One&display=swap" rel="stylesheet">
+    <title>PULSED TASH — NASA Live Feed</title>
+    <meta name="description" content="What NASA photographed today, plus a live count of asteroids passing Earth. Updated daily." />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="/src/style.css" />
   </head>
   <body>
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+      <defs>
+        <linearGradient id="hbGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%"   stop-color="#6c3bff" />
+          <stop offset="50%"  stop-color="#c026d3" />
+          <stop offset="100%" stop-color="#6c3bff" />
+        </linearGradient>
+      </defs>
+    </svg>
+
     <div id="app"></div>
     <script type="module" src="/src/main.js"></script>
   </body>

@@ -4,11 +4,10 @@ a custom new tab page that pulls today's astronomy picture from NASA and puts it
 
 ## what even is this
 
-so i was going through the [hack club PULSED guide](https://pulsed.hackclub.com) and thought — why not actually build this thing properly instead of just following along like a robot? the idea is simple: NASA has this API called **APOD** (Astronomy Picture of the Day) that serves a new space photo every single day with a title and explanation. i fetch that and display it.
+so i was going through the [hack club PULSED guide](https://pulsed.hackclub.com) and thought — why not actually build this thing properly instead of just following along like a robot? the idea is simple: NASA has this API that serves a new space photo every single day with a title and explanation. i fetch that and display it.
 
 that's it. that's the whole app.
-
-but i spent way more time on the styling than i'd like to admit. the zigzag strips on the sides? those are pure CSS `clip-path: polygon()` with like 40+ coordinate points each. no library, no SVG, just math and pain.
+      i tried to make this website as cool as it can be but if you want , i can do some of more changes !!
 
 ## what i actually learned
 
@@ -34,25 +33,7 @@ nothing fancy:
 - [Orbitron](https://fonts.google.com/specimen/Orbitron) — for the title, because it looks like something you'd see on a spaceship HUD
 - [Black Ops One](https://fonts.google.com/specimen/Black+Ops+One) — for the body text, gives it a bold military-space vibe
 
-## how to run this yourself
 
-```bash
-# clone it
-git clone https://github.com/vraj2011/PULSED-TASH.git
-cd PULSED-TASH
-
-# install dependencies (just vite)
-npm install
-
-# create a .env file with your NASA API key
-# get one free at https://api.nasa.gov
-echo VITE_NASA_API_KEY=your_key_here > .env
-
-# run it
-npm run dev
-```
-
-then open `http://localhost:5173` and you should see today's space picture.
 
 ## the bugs i hit (and fixed)
 
@@ -74,7 +55,7 @@ then open `http://localhost:5173` and you should see today's space picture.
 - a date picker so you can browse past APOD images (the datepicker was already in my HTML, just not wired up yet)
 - save favorites to localStorage
 - keyboard shortcuts to go forward/backward through dates
-
+    
 ---
 
 built by [vraj](https://github.com/vraj2011) while following the [PULSED guide](https://pulsed.hackclub.com) and actually trying every task before reading the solution ✌️
